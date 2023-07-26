@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'TT Commons Regular';
+    src: url(../fonts/TT\ Commons\ Regular.otf);
+    font-family: 'The Seasons';
+    src: url(../fonts/Fontspring-DEMO-theseasons-reg.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'TT Commons Regular', Arial, sans-serif;
+    color: #69443c;
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(72deg,#c7b5a2,#beb7af);
+}
+
+.infoPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoPage h6 {
+    font-weight: 500;
+    font-size: 19px;
+    padding: 18px;
+    margin-top: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 800px;
+    height: calc(100vh - 73px);
+}
+
+.main h1 {
+    font-family: 'The Seasons';
+    font-size: 80px;
+    margin-bottom: 25px;
+    padding: 18px;
+}
+
+form {
+    padding-right: 220px; /* Ajuste o valor conforme necessário */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.password {
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.password label {
+    margin-right: 10px;
+    margin-left: 2px;
+}
+
+.password input {
+    width: 214px;
+    height: 20px;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.log {
+    font-weight: 600;
+    margin-right: 0;
+    margin-bottom: 8px;
+}
+
+.log input {
+    width: 167px;
+    height: 20px;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.log label {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+form h4 {
+    margin-left: 64px;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.butonForm {
+    border-radius: 16px;
+    padding: 10px;
+    width: 150px;
+    background-color: #a8937c;
+    transition: 0.6s;
+}
+
+.butonForm:hover {
+    background-color: #b1875a;
+}
