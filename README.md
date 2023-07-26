@@ -63,5 +63,6 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 
 ## To Run::
+ - composer update
  - cd public
  - php -S localhost:8080
