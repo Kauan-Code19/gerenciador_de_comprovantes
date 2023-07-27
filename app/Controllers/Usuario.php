@@ -12,9 +12,10 @@ class Usuario extends BaseController
         $model = model(UsuarioModel::class);
 
         $usuarios = $model->findAll();
-        var_dump($usuarios);
-        $data['title'] = ucfirst('teste');
-
+        $data = [
+            'usuario'  => $usuarios,
+            'title' => ucfirst('Listagem de Usuários'),
+        ];
 
         return view('templates/header', $data)
                 .view('usuario/index')

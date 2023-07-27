@@ -7,9 +7,9 @@
         <h3><?= esc($usuario_item['nome']) ?></h3>
 
         <div class="main">
-            <?= esc($usuario_item['body']) ?>
+            <?= esc($usuario_item['email']) ?>
         </div>
-        <p><a href="/usuario/<?= esc($usuario_item['slug'], 'url') ?>">View article</a></p>
+        <p><a href="/usuario/<?= esc($usuario_item['id'], 'url') ?>">View article</a></p>
 
     <?php endforeach ?>
 
