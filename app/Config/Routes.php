@@ -6,9 +6,9 @@ namespace Config;
 $routes = Services::routes();
 
 /*
- * --------------------------------------------------------------------
- * Router Setup
- * --------------------------------------------------------------------
+* --------------------------------------------------------------------
+* Router Setup
+* --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
@@ -22,14 +22,25 @@ $routes->set404Override();
 // $routes->setAutoRoute(false);
 
 /*
- * --------------------------------------------------------------------
- * Route Definitions
+* --------------------------------------------------------------------
+* Route Definitions
  * --------------------------------------------------------------------
  */
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+use App\Controllers\Home;
+use App\Controllers\Usuario;
+
+$routes->get('usuario', [Usuario::class, 'index']);
+$routes->get('usuario/(:segment)', [Usuario::class, 'view']);
+
+//$routes->get('/', 'Home::index');
+$routes->get('login', [Home::class, 'index']);
+$routes->get('(:segment)', [Home::class, 'view']);
+
+
+
 
 /*
  * --------------------------------------------------------------------
