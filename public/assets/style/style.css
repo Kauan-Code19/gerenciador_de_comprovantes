@@ -1,11 +1,8 @@
 @font-face {
     font-family: 'TT Commons Regular';
     src: url(../fonts/TT\ Commons\ Regular.otf);
-}
-
-@font-face {
     font-family: 'The Seasons';
-    src: url(../fonts/Fontspring-DEMO-theseasons-reg.otf);
+    src: url(../fonts/Fontspring-DEMO-theseasons-reg.otf)
 }
 
 * {

@@ -12,7 +12,7 @@
     </div>
 
     <div class="main">
-        <h1>Faça seu login.</h1>
+        <h1>Faça seu Login.</h1>
 
             <form action="/auth/login" method="post" class="login-form">
                 <div class="log">
