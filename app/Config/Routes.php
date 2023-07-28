@@ -33,9 +33,12 @@ use App\Controllers\Home;
 use App\Controllers\Usuario;
 //use App\Controllers\Comprovante;
 
-$routes->match(['get', 'post'], 'usuario/cadastro', [Usuario::class, 'cadastro']);
-$routes->get('usuario', [Usuario::class, 'index']);
-$routes->get('usuario/(:segment)', [Usuario::class, 'view']);
+$routes->get('usuario/cadastro', [Usuario::class, 'telaDeCadastro']);
+$routes->post('usuario/salvar', [Usuario::class, 'salvar']);
+$routes->get('usuario/edicao/(:segment)', [Usuario::class, 'telaDeDetalhe']);
+$routes->post('usuario/atualizar', [Usuario::class, 'atualizar']);
+$routes->get('usuario/deletar/(:segment)', [Usuario::class, 'deletar']);
+$routes->get('usuario', [Usuario::class, 'telaDeListagem']);
 
 //$routes->get('comprovante', [Comprovante::class, 'index']);
 

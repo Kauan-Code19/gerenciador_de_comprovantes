@@ -1,7 +1,7 @@
 <?= session()->getFlashdata('error') ?>
 <?= validation_list_errors() ?>
 
-<form action="/usuario/cadastro" method="post">
+<form action="/usuario/salvar" method="post">
     <?= csrf_field() ?>
 
     <label for="nome">Nome</label>

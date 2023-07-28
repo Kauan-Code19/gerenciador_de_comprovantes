@@ -7,11 +7,11 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Usuario extends BaseController
 {
-    public function index()
+    public function telaDeListagem()
     {
         $model = model(UsuarioModel::class);
 
-        $usuarios = $model->findAll();
+        $usuarios = $model->orderBy('id', 'DESC')->findAll();
         $data = [
             'usuario'  => $usuarios,
             'title' => ucfirst('Listagem de Usuários'),
@@ -22,43 +22,38 @@ class Usuario extends BaseController
                 .view('templates/footer');
     }
 
-    public function view($slug = null)
-    {
-        $model = model(UsuarioModel::class);
-
-        $data['usuario'] = $model->first($slug);
-        $model = model(NewsModel::class);
-
-
-        if (empty($data['news'])) {
-            throw new PageNotFoundException('Cannot find the news item: ' . $slug);
-        }
-
-        return view('templates/header', $data)
-            . view('news/view')
-            . view('templates/footer');
-    }
-
-    public function cadastro()
+    public function telaDeDetalhe($id)
     {
         helper('form');
 
-        // Checks whether the form is submitted.
-        if (! $this->request->is('post')) {
-            // The form is not submitted, so returns the form.
-            return view('templates/header', ['title' => 'Criar usuário'])
-                . view('usuario/cadastro')
-                . view('templates/footer');
-        }
+        $model = model(UsuarioModel::class);
 
+        $data = [
+            'usuario'  => $model->where('id', $id)->first(),
+            'title' => ucfirst('Edição de Usuários'),
+        ];
+
+        return view('templates/header', $data)
+            . view('usuario/edicao')
+            . view('templates/footer');
+    }
+
+    public function telaDeCadastro()
+    {
+        helper('form');
+        return view('templates/header', ['title' => 'Criar usuário'])
+            . view('usuario/cadastro')
+            . view('templates/footer');
+    }
+
+    public function salvar() {
         $post = $this->request->getPost(['nome', 'email']);
 
-        // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
             'nome' => 'required|max_length[255]|min_length[3]',
             'email'  => 'required|max_length[5000]|min_length[10]',
-        ])) {
-            // The validation fails, so returns the form.
+        ]))
+        {
             return view('templates/header', ['title' => 'Criar usuário'])
                 . view('usuario/cadastro')
                 . view('templates/footer');
@@ -71,8 +66,35 @@ class Usuario extends BaseController
             'email'  => $post['email'],
         ]);
 
-        return view('templates/header', ['title' => 'Criar usuário'])
-            . view('usuario/success')
-            . view('templates/footer');
+        return $this->response->redirect(base_url('/usuario'));
+    }
+
+    public function atualizar()
+    {
+        $post = $this->request->getPost(['nome', 'email', 'id']);
+
+
+        var_dump($post);
+
+        $model = model(UsuarioModel::class);
+
+        $model->update(
+            $post['id'],
+            [
+                'nome' => $post['nome'],
+                'email'  => $post['email'],
+            ]
+        );
+
+        return $this->response->redirect(base_url('/usuario'));
+    }
+
+    public function deletar($id)
+    {
+        $model = model(UsuarioModel::class);
+
+        $model->where('id', $id)->delete($id);
+        
+        return $this->response->redirect(base_url('/usuario'));
     }
 }
