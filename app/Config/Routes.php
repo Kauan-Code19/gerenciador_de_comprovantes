@@ -31,9 +31,13 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 use App\Controllers\Home;
 use App\Controllers\Usuario;
+//use App\Controllers\Comprovante;
 
+$routes->match(['get', 'post'], 'usuario/cadastro', [Usuario::class, 'cadastro']);
 $routes->get('usuario', [Usuario::class, 'index']);
 $routes->get('usuario/(:segment)', [Usuario::class, 'view']);
+
+//$routes->get('comprovante', [Comprovante::class, 'index']);
 
 //$routes->get('/', 'Home::index');
 $routes->get('login', [Home::class, 'index']);
