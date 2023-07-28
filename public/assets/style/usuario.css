@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'TT Commons Regular';
+    src: url(../fonts/TT\ Commons\ Regular.otf);
+}
+
+body {
+    background-color: #c3a384;
+    font-family: 'TT Commons Regular';
+}
+
+h1 {
+    color: #5d4c3f;
+}
+
+.th {
+    color: white;
+    font-size: 22px;
+    background-color: #5d4c3f;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table {
+    background-color: #f9f6ee;
+}
