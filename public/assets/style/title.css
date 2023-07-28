@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'TT Commons Regular';
+    src: url(../fonts/TT\ Commons\ Regular.otf);
+}
+
+* {
+    font-family: 'TT Commons Regular';
+    font-size: medium;
+    font-weight: 500;
+}
+
+.fundo {
+    background: linear-gradient(to right,#f0f5f9, #edf2f6);
+}
+
+.badge-custom {
+    background-color: #4a69bb;
+}
+
+.bg-combined {
+    background-color: #78a4cf;
+    font-size: 22px;
+}
+
+.bg-name {
+    background-color: #8ab6d6;
+    font-size: 22px;
+}
+
+.bgb-name {
+    background-color: #e2bcb7;
+    font-size: 18px;
+}
+
+.bg-email {
+    background-color: #d3c3ea;
+    font-size: 22px;
+}
+
+.bgb-email {
+    background-color: #d3c3ea;
+    font-size: 18px;
+}
