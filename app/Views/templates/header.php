@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/style/edicao.css">
 </head>
 <body>
-    <div class="container">
-        <div class="text-center">
-            <h1><?= esc($title) ?></h1>
-        </div>
+    <div class="container text-center py-2 my-2">
+        <h1 class="text-white"><?= esc($title) ?></h1>
+    </div>
