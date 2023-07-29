@@ -9,7 +9,7 @@
     <br>
 
     <label for="email">email</label>
-    <input name="email"><?= set_value('email') ?></textarea>
+    <input name="email"><?= set_value('email') ?></input>
     <br>
 
     <input type="submit" name="submit" value="Create news item">

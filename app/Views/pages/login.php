@@ -14,20 +14,21 @@
     <div class="main">
         <h1>Faça seu login.</h1>
 
-            <form action="/auth/login" method="post" class="login-form">
+            <form action="logar" method="post" class="login-form">
+                <?= csrf_field() ?>
                 <div class="log">
-                    <label for="Cpf/E-mail">CPF ou E-mail:</label>
-                    <input type="text" name="Cpf/E-mail" id="Cpf/E-mail">
+                    <label for="email">CPF ou E-mail:</label>
+                    <input type="text" name="email" id="Cpf/E-mail" value="<?= set_value('email') ?>">
                 </div>
                 <div class="password">
                     <label for="Password">SENHA:</label>
-                    <input type="password" name="Password" id="Password">
+                    <input type="password" name="senha" id="Password" value="<?= set_value('senha') ?>">
                 </div>
 
                 <h4>SE VOCÊ NÃO TEM CADASTRO, <a href="#">CLIQUE AQUI</a></h4>
+                <button type="submit" class="butonForm">Confirmar</button>
             </form>
 
-            <button class="butonForm">Confirmar</button>
     </div>
 </body>
 </html>
