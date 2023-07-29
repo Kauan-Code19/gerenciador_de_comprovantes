@@ -14,10 +14,16 @@
                             <tbody>
                                 <?php foreach ($usuario as $usuario_item): ?>
                                     <tr class="text-center tb">
-                                        <td><?= esc($usuario_item['id']) ?></td>
-                                        <td><?= esc($usuario_item['nome']) ?></td>
-                                        <td><?= esc($usuario_item['email']) ?></td>
-                                        <td><div>
+                                        <td>
+                                            <div class="divCenter"><?= esc($usuario_item['id']) ?></div>
+                                        </td>
+                                        <td>
+                                            <div class="divCenter"><?= esc($usuario_item['nome']) ?></div>
+                                        </td>
+                                        <td>
+                                            <div  class="divCenter"><?= esc($usuario_item['email']) ?></div>
+                                        </td>
+                                        <td><div class="button">
                                             <button>
                                                 <p><a href="/usuario/edicao/<?= esc($usuario_item['id'], 'url') ?>">editar</a></p>
                                             </button>

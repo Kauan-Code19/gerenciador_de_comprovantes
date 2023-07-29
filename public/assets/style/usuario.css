@@ -3,8 +3,13 @@
     src: url(../fonts/TT\ Commons\ Regular.otf);
 }
 
+html {
+    height: 100vh;
+    width: 100%;
+}
+
 body {
-    background-color: #c3a384;
+    background: linear-gradient(45deg, #c3a384, #d1b493, #e0c2a2);
     font-family: 'TT Commons Regular';
 }
 
@@ -21,8 +26,18 @@ h1 {
 .table-container {
     max-height: 400px;
     overflow-y: auto;
+    box-shadow: 4px 8px 10px 4px rgba(100, 100, 100, 2.2);
 }
 
 .table {
     background-color: #f9f6ee;
+}
+
+.button p {
+    margin-bottom: 0;
+    padding: 6px;
+}
+
+.divCenter {
+    margin-top: 9px;
 }

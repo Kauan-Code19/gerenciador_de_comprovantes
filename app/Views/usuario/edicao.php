@@ -1,17 +1,30 @@
-<?= session()->getFlashdata('error') ?>
-<?= validation_list_errors() ?>
+    <div class="row justify-content-center">
+        <div class="card">
+            <div class="card-body">
+                <?= validation_list_errors() ?>
+            
+                    <form action="/usuario/atualizar" method="post" class="divForm">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
 
-<form action="/usuario/atualizar" method="post">
-    <?= csrf_field() ?>
-    <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
+                        <div class="form-group text-left">
+                            <label for="nome" class="label">Nome:</label>
+                            <input class="form-control" type="input" name="nome" value="<?php echo $usuario['nome']; ?>">
+                        </div>
+                        <br>
+                
+                        <div class="form-group text-left">
+                            <label for="email" class="label">Email:</label>
+                            <input class="form-control" type="input" name="email" value="<?php echo $usuario['email']; ?>">
+                        </div>
+                        <br>
 
-    <label for="nome">Nome</label>
-    <input type="input" name="nome" value="<?php echo $usuario['nome']; ?>">
-    <br>
+                        <div class="form-group text-center">
+                            <input type="submit"  class="btn btn-primary" name="submit" value="Atualizar">
+                        </div>
+                    </form>
 
-    <label for="email">email</label>
-    <input type="input" name="email" value="<?php echo $usuario['email']; ?>">
-    <br>
-
-    <input type="submit" name="submit" value="Atualizar">
-</form>
+                <?= session()->getFlashdata('error') ?>
+            </div>
+        </div>
+    </div>
