@@ -1,9 +1,6 @@
 @font-face {
     font-family: 'TT Commons Regular';
     src: url(../fonts/TT\ Commons\ Regular.otf);
-}
-
-@font-face {
     font-family: 'The Seasons';
     src: url(../fonts/Fontspring-DEMO-theseasons-reg.otf);
 }
@@ -14,31 +11,49 @@
     padding: 0;
     border: 0;
     font-family: 'TT Commons Regular', Arial, sans-serif;
+    /* color: #69443c; */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.divMae {
+    background-image: url(../img/Fundo.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.mt-2, .my-2 {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+h1 {
+    margin-bottom: 0;
     color: #69443c;
 }
 
-body, html {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../img/Fundo.jpg);
-    background-position: center;
-    background-repeat: repeat-x;
-}
 
-.infoPage {
+/* CSS DE LOGIN.PHP */
+.infoPageLogin {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.infoPage h6 {
+.infoPageLogin h6 {
     font-weight: 500;
     font-size: 19px;
     padding: 18px;
     margin-top: 15px;
+    color: #69443c;
 }
 
-.main {
+.mainLogin {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,62 +62,66 @@ body, html {
     height: calc(100vh - 73px);
 }
 
-.main h1 {
+.mainLogin h1 {
     font-family: 'The Seasons';
     font-size: 80px;
     margin-bottom: 25px;
     padding: 18px;
-}
-
-form {
-    padding-right: 220px;
+    color: #69443c;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.password {
-    font-weight: 600;
-    margin-bottom: 35px;
-}
-
-.password label {
-    margin-right: 10px;
-    margin-left: 2px;
-}
-
-.password input {
-    width: 214px;
-    height: 20px;
-    border-radius: 6px;
-    padding: 8px;
+    justify-content: start;
+    align-items: flex-start;
+    min-width: 490px;
 }
 
 .log {
     font-weight: 600;
     margin-right: 0;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    padding: 8px;
 }
 
 .log input {
-    width: 167px;
+    width: 160px;
     height: 20px;
     border-radius: 6px;
     padding: 8px;
 }
 
 .log label {
-    margin-right: 8px;
-    margin-left: 8px;
+    margin-right: 4px;
+    margin-left: 0px;
+    color: #69443c;
 }
 
-form h4 {
-    margin-left: 64px;
+.password {
+    font-weight: 600;
+    margin-bottom: 35px;
+    padding: 8px;
+}
+
+.password label {
+    margin-left: 0px;
+    color: #69443c;
+}
+
+.password input {
+    width: 167px;
+    height: 20px;
+    border-radius: 6px;
+    padding: 8px;
+    margin-left: 55px;
+    justify-content: center;
+}
+
+.login-form h4 {
     margin-bottom: 50px;
     font-weight: 300;
+    color: #69443c;
 }
 
 .butonForm {
@@ -116,3 +135,88 @@ form h4 {
 .butonForm:hover {
     background-color: #b1875a;
 }
+/* FECHAMENTO LOGIN.PHP */
+
+
+/* CSS DE INDEX.PHP */
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+    box-shadow: 4px 8px 10px 4px rgba(100, 100, 100, 2.2);
+}
+
+.table {
+    background-color: #f9f6ee;
+}
+
+.thIndex {
+    color: white;
+    font-size: 22px;
+    background-color: #5d4c3f;
+}
+
+.divCenter {
+    margin-top: 9px;
+}
+
+.buttonIndex p {
+    margin-bottom: 0;
+    padding: 6px;
+}
+/* FECHAMENTO INDEX.PHP */
+
+
+/* CSS DE EDICAO.PHP */
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.rowFormEdicao {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card {
+    box-shadow: 4px 8px 10px 4px rgba(100, 100, 100, 2.2);
+}
+
+.divFormEdicao {
+    background-color: #f9f6ee;
+    min-height: 300px;
+    min-width: 300px;
+}
+
+.label {
+    padding: 6px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: #69443c;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #ab9f92;
+    border-color: #c0b5a9;
+}
+
+.btn-primary:hover {
+    background-color: #5d4c3f;
+    border-color: #c0b5a9;
+    text-decoration: none;
+}
+/* FECHAMENTO EDICAO.PHP */
+
+
+/* CSS DE CADASTRO.PHP */
+.rowFormCadastro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.divFormCadastro {
+    background-color: #f9f6ee;
+    min-height: 300px;
+    min-width: 300px;
+}
+/* FECHAMENTO CADASTRO.PHP */
