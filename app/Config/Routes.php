@@ -42,8 +42,9 @@ $routes->get('usuario', [Usuario::class, 'telaDeListagem']);
 
 //$routes->get('comprovante', [Comprovante::class, 'index']);
 
-//$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index');
 $routes->get('login', [Home::class, 'index']);
+$routes->post('logar', [Home::class, 'logar']);
 $routes->get('(:segment)', [Home::class, 'view']);
 
 
