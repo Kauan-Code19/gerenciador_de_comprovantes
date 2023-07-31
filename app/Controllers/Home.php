@@ -38,6 +38,17 @@ class Home extends BaseController
             return $this->response->redirect(base_url('/'));
         }
 
+        $session = session();
+
+        $ses_data = [
+            'id' => $usuario['id'],
+            'nome' => $usuario['nome'],
+            'email' => $usuario['email'],
+            'isLoggedIn' => TRUE
+        ];
+        
+        $session->set($ses_data);
+        
         return $this->response->redirect(base_url('/usuario'));
     }
 }
