@@ -1,25 +1,16 @@
-        <div class="infoPageLogin">
-            <h6>Acesse aqui seus documentos</h6>
-        </div>
-
-        <div class="mainLogin">
-            <h1>Faça seu login</h1>
+        <div class="text-center mainLogin">
 
             <form action="logar" method="post" class="login-form">
                 <?= csrf_field() ?>
                 <div class="log">
-                    <label for="email">CPF ou E-mail:</label>
-                    <input type="text" name="email" id="Cpf/E-mail" value="<?= set_value('email') ?>">
+                    <input type="email" name="email" id="E-mail" placeholder="Email" class="btn-aplicacao" value="<?= set_value('email') ?>">
                 </div>
                 <div class="password">
-                    <label for="Password">SENHA:</label>
-                    <input type="password" name="senha" id="Password" value="<?= set_value('senha') ?>">
+                    <input type="password" name="senha" id="Password" placeholder="Senha" class="btn-aplicacao" value="<?= set_value('senha') ?>">
                 </div>
 
-                <h4>SE VOCÊ NÃO TEM CADASTRO, <a href="#">CLIQUE AQUI</a></h4>
-                <button type="submit" class="butonForm">Confirmar</button>
+                <h4>Se você não tem cadastro, <a href="/usuario/cadastro">Clique Aqui</a></h4>
+                <button type="submit" class="btn-aplicacao">Confirmar</button>
             </form>
 
-    </div>
-</body>
-</html>
+        </div>

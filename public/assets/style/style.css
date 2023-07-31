@@ -37,6 +37,16 @@ h1 {
     color: #69443c;
 }
 
+.btn-aplicacao {
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ab9f92;
+    transition: 0.4s;
+}
+
 
 /* CSS DE LOGIN.PHP */
 .infoPageLogin {
@@ -73,67 +83,39 @@ h1 {
 .login-form {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     min-width: 490px;
 }
 
 .log {
-    font-weight: 600;
-    margin-right: 0;
     margin-bottom: 2px;
     padding: 8px;
 }
 
-.log input {
-    width: 160px;
-    height: 20px;
-    border-radius: 6px;
-    padding: 8px;
-}
-
-.log label {
-    margin-right: 4px;
-    margin-left: 0px;
+.log input::placeholder {
     color: #69443c;
 }
 
 .password {
-    font-weight: 600;
     margin-bottom: 35px;
     padding: 8px;
 }
 
-.password label {
-    margin-left: 0px;
+.password input::placeholder {
     color: #69443c;
-}
-
-.password input {
-    width: 167px;
-    height: 20px;
-    border-radius: 6px;
-    padding: 8px;
-    margin-left: 55px;
-    justify-content: center;
 }
 
 .login-form h4 {
     margin-bottom: 50px;
     font-weight: 300;
+    height: 30px;
     color: #69443c;
 }
 
-.butonForm {
-    border-radius: 16px;
-    padding: 10px;
-    width: 150px;
+.btn-aplicacao:hover {
     background-color: #ab9f92;
-    transition: 0.6s;
-}
-
-.butonForm:hover {
-    background-color: #b1875a;
+    border-color: #c0b5a9;
 }
 /* FECHAMENTO LOGIN.PHP */
 
@@ -149,6 +131,16 @@ h1 {
     background-color: #f9f6ee;
 }
 
+.table td {
+    vertical-align: sub;
+}
+
+.table td a i {
+    color: #69443c;
+    height: 22px;
+    width: 22px;
+}
+
 .thIndex {
     color: white;
     font-size: 22px;
@@ -157,11 +149,6 @@ h1 {
 
 .divCenter {
     margin-top: 9px;
-}
-
-.buttonIndex p {
-    margin-bottom: 0;
-    padding: 6px;
 }
 /* FECHAMENTO INDEX.PHP */
 
@@ -173,50 +160,57 @@ h1 {
 }
 
 .rowFormEdicao {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 32px;
+    margin-bottom: 18px;
 }
 
 .card {
     box-shadow: 4px 8px 10px 4px rgba(100, 100, 100, 2.2);
 }
 
+.card-body {
+    padding: 17px;
+}
+
 .divFormEdicao {
     background-color: #f9f6ee;
-    min-height: 300px;
-    min-width: 300px;
+    max-height: 460px;
+    min-width: 250px;
+}
+
+.form-group {
+    max-height: 300px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    padding: 8px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: left; */
+}
+
+.form-group input {
+    margin-left: 0;
 }
 
 .label {
-    padding: 6px;
     font-size: 18px;
+    padding: 2px;
     margin-bottom: 4px;
     color: #69443c;
     font-weight: 500;
-}
-
-.btn-primary {
-    background-color: #ab9f92;
-    border-color: #c0b5a9;
-}
-
-.btn-primary:hover {
-    background-color: #5d4c3f;
-    border-color: #c0b5a9;
-    text-decoration: none;
 }
 /* FECHAMENTO EDICAO.PHP */
 
 
 /* CSS DE CADASTRO.PHP */
 .rowFormCadastro {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 32px;
+    margin-bottom: 18px;
 }
 
 .divFormCadastro {
     background-color: #f9f6ee;
-    min-height: 300px;
-    min-width: 300px;
+    max-height: 460px;
+    min-width: 250px;
 }
 /* FECHAMENTO CADASTRO.PHP */

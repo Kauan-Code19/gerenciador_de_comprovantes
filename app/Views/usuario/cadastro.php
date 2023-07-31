@@ -8,18 +8,26 @@
 
                             <div class="form-group text-left">
                                 <label for="nome" class="label">Nome:</label>
-                                <input class="form-control" type="input" name="nome" value="<?= set_value('nome') ?>">
+                                <input class="form-control btn-aplicacao" type="text" name="nome" value="<?= set_value('nome') ?>">
                             </div>
-                            <br>
                     
                             <div class="form-group text-left">
                                 <label for="email" class="label">Email:</label>
-                                <input class="form-control" type="input" name="email"><?= set_value('email') ?></textarea>
+                                <input class="form-control btn-aplicacao" type="email" name="email"><?= set_value('email') ?></textarea>
                             </div>
-                            <br>
 
-                            <div class="form-group text-center">
-                                <input type="submit"  class="btn btn-primary" name="submit" value="Create news item">
+                            <div class="form-group text-left">
+                                <label for="password" class="label">Senha:</label>
+                                <input class="form-control btn-aplicacao" type="password" name="password"><?= set_value('senha') ?>
+                            </div>
+
+                            <div class="form-group text-left">
+                                <label for="confirmpassword" class="label">Confirme sua senha:</label>
+                                <input class="form-control btn-aplicacao" type="password" name="confirmpassword"><?= set_value('senha') ?>
+                            </div>
+
+                            <div class="form-group text-left">
+                                <input type="submit"  class="btn btn-aplicacao" name="submit" value="Create news item">
                             </div>
                         </form>
 
