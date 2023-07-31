@@ -35,10 +35,10 @@ use App\Controllers\Usuario;
 
 $routes->get('usuario/cadastro', [Usuario::class, 'telaDeCadastro']);
 $routes->post('usuario/salvar', [Usuario::class, 'salvar']);
-$routes->get('usuario/edicao/(:segment)', [Usuario::class, 'telaDeDetalhe']);
-$routes->post('usuario/atualizar', [Usuario::class, 'atualizar']);
-$routes->get('usuario/deletar/(:segment)', [Usuario::class, 'deletar']);
-$routes->get('usuario', [Usuario::class, 'telaDeListagem']);
+$routes->get('usuario/edicao/(:segment)', [Usuario::class, 'telaDeDetalhe'],['filter' => 'authGuard']);
+$routes->post('usuario/atualizar', [Usuario::class, 'atualizar'],['filter' => 'authGuard']);
+$routes->get('usuario/deletar/(:segment)', [Usuario::class, 'deletar'],['filter' => 'authGuard']);
+$routes->get('usuario', [Usuario::class, 'telaDeListagem'],['filter' => 'authGuard']);
 
 //$routes->get('comprovante', [Comprovante::class, 'index']);
 
