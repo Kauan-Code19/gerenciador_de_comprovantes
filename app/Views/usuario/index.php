@@ -2,7 +2,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <?php if (! empty($usuario) && is_array($usuario)): ?>
-                        <div class="table-container">
+                        <div class="table-container justify-content-center">
                             <table class="table">
                                 <thead>
                                     <tr class="text-center thIndex">
@@ -24,14 +24,10 @@
                                             <td>
                                                 <div  class="divCenter"><?= esc($usuario_item['email']) ?></div>
                                             </td>
-                                            <td><div class="buttonIndex">
-                                                <div class="btn btn-primary btn-aplicacao">
-                                                    <p><a class="text-decoration-none text-white" href="/usuario/edicao/<?= esc($usuario_item['id'], 'url') ?>">editar</a></p>
-                                                </div>
-                                                <div class="btn btn-danger btn-aplicacao">
-                                                    <p><a class="text-decoration-none text-white" href="/usuario/deletar/<?= esc($usuario_item['id'], 'url') ?>">deletar</a></p>
-                                                </div>
-                                            </div></td>
+                                            <td>
+                                                <a href="/usuario/edicao/<?= esc($usuario_item['id'], 'url') ?>"><i class="bi bi-pencil-square"></i></a>
+                                                <a href="/usuario/deletar/<?= esc($usuario_item['id'], 'url') ?>"><i class="bi bi-trash3-fill"></i></a>
+                                            </td>
                                         </tr>
                                     <?php endforeach ?>
                                 </tbody>

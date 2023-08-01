@@ -9,18 +9,26 @@
 
                             <div class="form-group text-left">
                                 <label for="nome" class="label">Nome:</label>
-                                <input class="form-control" type="input" name="nome" value="<?php echo $usuario['nome']; ?>">
+                                <input class="form-control btn-aplicacao" type="text" name="nome" value="<?php echo $usuario['nome']; ?>">
                             </div>
-                            <br>
                     
                             <div class="form-group text-left">
                                 <label for="email" class="label">Email:</label>
-                                <input class="form-control" type="input" name="email" value="<?php echo $usuario['email']; ?>">
+                                <input class="form-control btn-aplicacao" type="email" name="email" value="<?php echo $usuario['email']; ?>">
                             </div>
-                            <br>
 
-                            <div class="form-group text-center">
-                                <input type="submit"  class="btn btn-primary" name="submit" value="Atualizar">
+                            <div class="form-group text-left">
+                                <label for="password" class="label">Senha:</label>
+                                <input class="form-control btn-aplicacao" type="password" name="password" value="<?php echo $usuario['senha']; ?>">
+                            </div>
+
+                            <div class="form-group text-left">
+                                <label for="confirmpassword" class="label">Confirme sua senha:</label>
+                                <input class="form-control btn-aplicacao" type="password" name="confirmpassword" value="<?php echo $usuario['senha']; ?>">
+                            </div>
+
+                            <div class="form-group text-left">
+                                <input type="submit"  class="btn btn-aplicacao" name="submit" value="Atualizar">
                             </div>
                         </form>
 

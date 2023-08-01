@@ -15,7 +15,7 @@ class Home extends BaseController
 
         $data['title'] = ucfirst($page);
 
-        return view('templates/header', $data)
+        return view('templates/headerlogin', $data)
             .view('pages/'.$page)
             .view('templates/footer');
     }
