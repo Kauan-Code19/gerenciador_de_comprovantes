@@ -35,16 +35,3 @@
                 </div>
             </div>
         </div>
-<!-- <form action="/usuario/salvar" method="post">
-    <?= csrf_field() ?>
-
-    <label for="nome">Nome</label>
-    <input type="input" name="nome" value="<?= set_value('nome') ?>">
-    <br>
-
-    <label for="email">email</label>
-    <input name="email"><?= set_value('email') ?></input>
-    <br>
-
-    <input type="submit" name="submit" value="Create news item">
-</form> -->

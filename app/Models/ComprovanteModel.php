@@ -10,5 +10,5 @@ class ComprovanteModel extends Model
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
-    protected $allowedFields = ['nome', 'email'];
+    protected $allowedFields = ['tipo','numero', 'vencimento', 'valor', 'status','metodo'];
 }

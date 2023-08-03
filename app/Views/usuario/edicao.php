@@ -1,6 +1,6 @@
         <div class="row justify-content-center align-items-center rowFormEdicao">
-            <div class="card">
-                <div class="card-body">
+            <div class="cardEdicao">
+                <div class="card-bodyEdicao">
                     <?= validation_list_errors() ?>
                 
                         <form action="/usuario/atualizar" method="post" class="divFormEdicao">

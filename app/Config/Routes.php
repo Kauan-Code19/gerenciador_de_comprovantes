@@ -31,7 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 use App\Controllers\Home;
 use App\Controllers\Usuario;
-//use App\Controllers\Comprovante;
+use App\Controllers\Comprovante;
 
 $routes->get('usuario/cadastro', [Usuario::class, 'telaDeCadastro']);
 $routes->post('usuario/salvar', [Usuario::class, 'salvar']);
@@ -40,7 +40,8 @@ $routes->post('usuario/atualizar', [Usuario::class, 'atualizar'],['filter' => 'a
 $routes->get('usuario/deletar/(:segment)', [Usuario::class, 'deletar'],['filter' => 'authGuard']);
 $routes->get('usuario', [Usuario::class, 'telaDeListagem'],['filter' => 'authGuard']);
 
-//$routes->get('comprovante', [Comprovante::class, 'index']);
+$routes->get('comprovante', [Comprovante::class, 'index']);
+$routes->get('/comprovante/cadastrar', 'Comprovante::cadastrar');
 
 $routes->get('/', 'Home::index');
 $routes->get('login', [Home::class, 'index']);

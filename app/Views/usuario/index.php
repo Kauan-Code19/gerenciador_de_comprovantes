@@ -2,7 +2,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <?php if (! empty($usuario) && is_array($usuario)): ?>
-                        <div class="table-container justify-content-center">
+                        <div class="table-container justify-content-center table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr class="text-center thIndex">
