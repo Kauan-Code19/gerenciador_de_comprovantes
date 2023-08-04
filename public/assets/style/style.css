@@ -247,4 +247,18 @@ h1 {
 .group-button {
     margin-top: 32px;
 }
+
+.btn-upload {
+    height: 45px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ab9f92;
+    transition: 0.4s;
+}
+
+.btn-upload:hover {
+    background-color: #ab9f92;
+    border-color: #c0b5a9;
+}
 /* FECHAMENTO CADASTRO (COMPROVANTES) */
