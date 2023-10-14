@@ -6,4 +6,4 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/style/style.css">
 </head>
 <body>
-    <div class="divMae">
+    <div class="divMae d-flex flex-column justify-content-center w-100 h-100">

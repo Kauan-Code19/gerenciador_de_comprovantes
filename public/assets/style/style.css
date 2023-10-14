@@ -11,20 +11,69 @@
     padding: 0;
     border: 0;
     font-family: 'TT Commons Regular', Arial, sans-serif;
-    /* color: #69443c; */
 }
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
+    background: -webkit-linear-gradient(225deg, #b3aba2, #dcd9d5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: 1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .divMae {
-    background-image: url(../img/Fundo.jpg);
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
+    position: relative;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.wave1 {
+    animation: movewave1 3s ease-in-out infinite alternate;
+}
+
+@keyframes movewave1 {
+    from {
+        transform: translate(-2000px)
+    }
+}
+
+.wave2 {
+    animation: movewave2 3s 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes movewave2 {
+    from {
+        transform: translate(-1800px)
+    }
+}
+
+.wave3 {
+    animation: movewave3 3s 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes movewave3 {
+    from {
+        transform: translate(-1600px)
+    }
 }
 
 .mt-2, .my-2 {
@@ -68,7 +117,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 800px;
     height: calc(100vh - 73px);
 }
 
@@ -85,7 +133,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 490px;
 }
 
 .log {
