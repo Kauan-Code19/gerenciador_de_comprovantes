@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\UsuarioModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Home extends BaseController

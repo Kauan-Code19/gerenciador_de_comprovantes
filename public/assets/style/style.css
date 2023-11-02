@@ -96,7 +96,6 @@ h1 {
     transition: 0.4s;
 }
 
-
 /* CSS DE LOGIN.PHP */
 .infoPageLogin {
     display: flex;
@@ -211,11 +210,12 @@ h1 {
     margin-bottom: 18px;
 }
 
-.card {
+.cardEdicao {
     box-shadow: 4px 8px 10px 4px rgba(100, 100, 100, 2.2);
+    background-color: #fff;
 }
 
-.card-body {
+.card-bodyEdicao {
     padding: 17px;
 }
 
@@ -230,9 +230,6 @@ h1 {
     margin-bottom: 0;
     margin-top: 2px;
     padding: 8px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: left; */
 }
 
 .form-group input {
@@ -261,3 +258,61 @@ h1 {
     min-width: 250px;
 }
 /* FECHAMENTO CADASTRO.PHP */
+
+
+/* CSS DE INDEX.PHP (COMPROVANTES) */
+.card {
+    box-shadow: 4px 8px 10px 4px rgba(100, 100, 100, 2.2);
+}
+
+.card a {
+    text-decoration: none;
+    background-color: #e0d8cc;
+    color: #333;
+}
+
+.card a:hover {
+    background-color: #dcd9d5;
+}
+
+.card-body {
+    padding: 12px;
+    text-align: center;
+}
+
+.card-footer a i {
+    color: #69443c;
+    height: 22px;
+    width: 22px;
+}
+/* FECHAMENTO INDEX.PHP (COMPROVANTES) */
+
+
+/* CSS DE CADASTRO (COMPROVANTES) */
+.rowFormComprovante {
+    margin-top: 32px;
+    margin-bottom: 18px;
+}
+
+.card-color {
+    background-color: #f9f6ee;
+}
+
+.group-button {
+    margin-top: 32px;
+}
+
+.btn-upload {
+    height: 45px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ab9f92;
+    transition: 0.4s;
+}
+
+.btn-upload:hover {
+    background-color: #ab9f92;
+    border-color: #c0b5a9;
+}
+/* FECHAMENTO CADASTRO (COMPROVANTES) */

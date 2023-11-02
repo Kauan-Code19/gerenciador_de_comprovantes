@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class ComprovanteModel extends Model
 {
-    protected $table = 'usuarios';
+    protected $table = 'comprovantes';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
-    protected $allowedFields = ['nome', 'email'];
+    protected $allowedFields = ['id_usuario','tipo', 'descricao', 'numero', 'data_vencimento', 'data_pagamento', 'valor', 'status','metodo', 'comprovante_img', 'extensao'];
 }
