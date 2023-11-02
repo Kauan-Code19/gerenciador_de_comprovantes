@@ -32,6 +32,6 @@
                         </form>
 
                     <?= session()->getFlashdata('error') ?>
-                </div>
+                </div> 
             </div>
         </div>
