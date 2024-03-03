@@ -67,9 +67,11 @@ php -S localhost:8080
 clone project besides public_html folder
 
 cp env .env
-CI_ENVIRONMENT = development
+CI_ENVIRONMENT = production
 app.baseURL = 'https:///domain.com/gerenciador_de_comprovantes'
 database connections
 
 cd public_html/
 ln -s ../gerenciador_de_comprovantes/public/ gerenciador_de_comprovantes
+
+OBS: This is an stand allone installation. DON'T USE COMPOSER
