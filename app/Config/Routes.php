@@ -6,9 +6,9 @@ namespace Config;
 $routes = Services::routes();
 
 /*
-* --------------------------------------------------------------------
-* Router Setup
-* --------------------------------------------------------------------
+ * --------------------------------------------------------------------
+ * Router Setup
+ * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
@@ -22,8 +22,8 @@ $routes->set404Override();
 // $routes->setAutoRoute(false);
 
 /*
-* --------------------------------------------------------------------
-* Route Definitions
+ * --------------------------------------------------------------------
+ * Route Definitions
  * --------------------------------------------------------------------
  */
 
@@ -39,6 +39,7 @@ $routes->get('usuario/edicao/(:segment)', [Usuario::class, 'telaDeDetalhe'],['fi
 $routes->post('usuario/atualizar', [Usuario::class, 'atualizar'],['filter' => 'authGuard']);
 $routes->get('usuario/deletar/(:segment)', [Usuario::class, 'deletar'],['filter' => 'authGuard']);
 $routes->get('usuario', [Usuario::class, 'telaDeListagem'],['filter' => 'authGuard']);
+// $routes->get('usuario', [Usuario::class, 'telaDeListagem']);
 
 $routes->get('comprovante', [Comprovante::class, 'index'],['filter' => 'authGuard']);
 $routes->get('comprovante/cadastrar', [Comprovante::class, 'cadastrar'],['filter' => 'authGuard']);
@@ -52,9 +53,6 @@ $routes->get('/', 'Home::index');
 $routes->get('login', [Home::class, 'index']);
 $routes->post('logar', [Home::class, 'logar']);
 $routes->get('(:segment)', [Home::class, 'view']);
-
-
-
 
 /*
  * --------------------------------------------------------------------
