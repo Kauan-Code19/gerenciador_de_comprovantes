@@ -25,8 +25,8 @@
                                                 <div  class="divCenter"><?= esc($usuario_item['email']) ?></div>
                                             </td>
                                             <td>
-                                                <a href="/usuario/edicao/<?= esc($usuario_item['id'], 'url') ?>"><i class="bi bi-pencil-square"></i></a>
-                                                <a href="/usuario/deletar/<?= esc($usuario_item['id'], 'url') ?>"><i class="bi bi-trash3-fill"></i></a>
+                                                <a href="<?= base_url(); ?>/usuario/edicao/<?= esc($usuario_item['id'], 'url') ?>"><i class="bi bi-pencil-square"></i></a>
+                                                <a href="<?= base_url(); ?>/usuario/deletar/<?= esc($usuario_item['id'], 'url') ?>"><i class="bi bi-trash3-fill"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach ?>

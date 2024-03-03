@@ -9,7 +9,7 @@
                     <input type="password" name="senha" id="Password" placeholder="Senha" class="btn-aplicacao" value="<?= set_value('senha') ?>">
                 </div>
 
-                <h4>Se você não tem cadastro, <a href="/usuario/cadastro">Clique Aqui</a></h4>
+                <h4>Se você não tem cadastro, <a href="<?= base_url(); ?>/usuario/cadastro">Clique Aqui</a></h4>
                 <button type="submit" class="btn-aplicacao">Confirmar</button>
             </form>
 
