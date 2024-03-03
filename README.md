@@ -52,3 +52,24 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+
+
+## Serve Local
+cp env .env
+CI_ENVIRONMENT = development
+app.baseURL = 'http://localhost:8080'
+database connections
+
+cd public
+php -S localhost:8080
+
+## Serve Production
+clone project besides public_html folder
+
+cp env .env
+CI_ENVIRONMENT = development
+app.baseURL = 'https:///domain.com/gerenciador_de_comprovantes'
+database connections
+
+cd public_html/
+ln -s ../gerenciador_de_comprovantes/public/ gerenciador_de_comprovantes
